@@ -92,7 +92,7 @@ alias r-xla-t='ctest --test-dir build/ -R PJRT -V'
 alias c-xla-t='cd build/ && ninja -t clean TTPJRTTests && cd ..'
 
 alias push='git push origin HEAD'
-alias stat='git status'
+alias st='git status'
 alias log='git log --pretty=format:"%C(yellow)%h%Creset %Cgreen%ad%Creset %C(blue)%an%Creset %C(red)%d%Creset %s" --date=short'
 alias purge='git clean -xdf'
 alias diff='git diff'
