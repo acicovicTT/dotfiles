@@ -1,0 +1,38 @@
+{{ if eq .chezmoi.os "darwin" }}{
+    "security.workspace.trust.untrustedFiles": "open",
+    "tt.ird.provider.sshPrivateKey": "/Users/acicovic/.ssh/id_rsa",
+    "tt.ird.reservation.docker-images": [
+        "ird"
+    ],
+    "tt.ird.list-machines.previous-filters": [
+        "compute",
+        "^/ interactive wormhole ^down",
+        "^/ interactive grayskull ^down"
+    ],
+    "tt.ird.list-machines.filter": "bgd",
+    "editor.inlayHints.enabled": "off",
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelZoom": true,
+    "editor.renderWhitespace": "all",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "diffEditor.renderSideBySide": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.startupEditor": "none",
+    "editor.rulers": [
+        80,
+    ],
+    "update.showReleaseNotes": false,
+    "claudeCode.preferredLocation": "panel",
+    "python.terminal.activateEnvironment": false,
+    "gitlens.views.formats.commits.label": "${id} ${❰ tips|11? ❱➤  }${message}",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "--compile-commands-dir=build",
+        "--background-index",
+        "--clang-tidy"
+    ],
+    "claudeCode.selectedModel": "opus",
+    "terminal.integrated.fontSize": 14,
+    "workbench.colorTheme": "Gruvbox Dark Soft"
+}{{ end }}
