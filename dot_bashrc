@@ -78,7 +78,7 @@ export XLADIR='/localdev/acicovic/tt-xla'
 
 # dev aliases
 alias home='cd /localdev/acicovic'
-alias init='echo -n "Create .vscode/ ... " && mkdir -p .vscode && cp ~/.vscode_usr/launch.json .vscode/ && echo -n "Initialize submodules ... " && git submodule update --init --recursive && echo "Activate venv ... " && source venv/activate && echo "Install hooks ... " && pre-commit install'
+alias init='echo -n "Create .vscode/ ... " && mkdir -p .vscode && cp ~/.vscode-my/launch.json .vscode/ && echo -n "Initialize submodules ... " && git submodule update --init --recursive && echo "Activate venv ... " && source venv/activate && echo "Install hooks ... " && pre-commit install'
 alias a='source venv/activate'
 alias cmake-rel='cmake -B build -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON'
 alias cmake-dbg='cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON'
