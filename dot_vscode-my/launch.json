@@ -30,6 +30,28 @@
       "MIMode": "gdb",
       // pjrt_plugin_tt.so is in this location
       "additionalSOLibSearchPath": "${workspaceFolder}/build/pjrt_implementation/src",
+    },
+    { // GTest: Filter and Run Tests
+      "name": "GTest: Filter and Run Tests",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/tests/pjrt/TTPJRTTests",
+      "args": [
+        "--gtest_filter=${input:gtestFilter}"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+    }
+  ],
+  "inputs": [
+    {
+      "id": "gtestFilter",
+      "type": "promptString",
+      "description": "Enter gtest filter (e.g., TestSuite.TestName or TestSuite.* for all tests in a suite)",
+      "default": "*"
     }
   ]
 }
