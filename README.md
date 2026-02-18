@@ -1,1 +1,1 @@
-My config files, managed by `chezmoi`.
+My config files.

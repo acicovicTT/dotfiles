@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.os "darwin" }}{
+{
     "security.workspace.trust.untrustedFiles": "open",
     "tt.ird.provider.sshPrivateKey": "/Users/acicovic/.ssh/id_rsa",
     "tt.ird.reservation.docker-images": [
@@ -9,7 +9,7 @@
         "^/ interactive wormhole ^down",
         "^/ interactive grayskull ^down"
     ],
-    "tt.ird.list-machines.filter": "bgd",
+    "tt.ird.list-machines.filter": "_x2",
     "editor.inlayHints.enabled": "off",
     "editor.minimap.enabled": false,
     "editor.mouseWheelZoom": true,
@@ -34,5 +34,8 @@
     ],
     "claudeCode.selectedModel": "opus",
     "terminal.integrated.fontSize": 14,
-    "workbench.colorTheme": "Gruvbox Dark Soft"
-}{{ end }}
+    "workbench.colorTheme": "Nord",
+    "gitlens.views.commitDetails.files.layout": "tree",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.openRepositoryInParentFolders": "never"
+}

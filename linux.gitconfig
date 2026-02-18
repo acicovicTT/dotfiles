@@ -2,13 +2,13 @@
 	email = acicovic@tenstorrent.com
 	name = acicovicTT
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
 [alias]
-	st = status
 	aa = add -u
+	br = branch --show-current
 	co = checkout
-	dt = difftool
+	st = status
