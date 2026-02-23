@@ -4,6 +4,16 @@ gc() {
     set +x
 }
 
+psg() {
+    if [ -z "$1" ]; then
+        echo "Usage: psg <keyword>"
+        return 1
+    fi
+    ps -eo pid,state,user,cmd \
+    | grep -i --color=auto "$1" \
+    | grep -v grep
+}
+
 activate_env() {
     set -x
     local dir="${PWD##*/}"
@@ -30,6 +40,8 @@ alias host='hostname'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias topm='ps -eo pid,user,%mem,%cpu,cmd --sort=-%mem | head -n 10'
+alias topc='ps -eo pid,user,%mem,%cpu,cmd --sort=-%cpu | head -n 10'
 
 alias xla='pushd /localdev/acicovic/tt-xla'
 alias mlir='pushd /localdev/acicovic/tt-mlir'
